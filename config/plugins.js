@@ -6,7 +6,7 @@ module.exports = ({ env }) => ({
         jwtSecret: env('ADMIN_JWT_SECRET') || crypto.randomBytes(16).toString('base64'),
       },
     },
-
+    
     
     upload: {
       config: {
@@ -23,5 +23,8 @@ module.exports = ({ env }) => ({
         },
       },
     },
-    // ...
+    ckeditor: {
+      enabled: true,
+      //resolve: "./src/plugins/strapi-plugin-ckeditor"
+    },
   });
