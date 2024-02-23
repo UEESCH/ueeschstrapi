@@ -382,7 +382,7 @@ export interface ApiPaginaPagina extends Schema.CollectionType {
         'plugin::ckeditor.CKEditor',
         {
           output: 'Markdown';
-          preset: 'rich';
+          preset: 'standard';
         }
       >;
     createdAt: Attribute.DateTime;
