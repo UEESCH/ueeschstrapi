@@ -399,6 +399,7 @@ export interface ApiPaginaPagina extends Schema.CollectionType {
     singularName: 'pagina';
     pluralName: 'paginas';
     displayName: 'pagina';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -407,6 +408,14 @@ export interface ApiPaginaPagina extends Schema.CollectionType {
     titulo: Attribute.String;
     descripcion_titulo: Attribute.String;
     imagen_header: Attribute.Media;
+    contenido: Attribute.RichText &
+      Attribute.CustomField<
+        'plugin::ckeditor.CKEditor',
+        {
+          output: 'Markdown';
+          preset: 'light';
+        }
+      >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

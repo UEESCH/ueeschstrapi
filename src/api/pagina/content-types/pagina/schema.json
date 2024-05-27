@@ -4,7 +4,8 @@
   "info": {
     "singularName": "pagina",
     "pluralName": "paginas",
-    "displayName": "pagina"
+    "displayName": "pagina",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -18,14 +19,23 @@
       "type": "string"
     },
     "imagen_header": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "contenido": {
+      "type": "customField",
+      "options": {
+        "output": "Markdown",
+        "preset": "light"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
     }
   }
 }
