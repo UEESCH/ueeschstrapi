@@ -362,7 +362,7 @@ export interface AdminTransferTokenPermission extends Schema.CollectionType {
   };
 }
 
-export interface ApiInformacionInformacion extends Schema.SingleType {
+export interface ApiInformacionInformacion extends Schema.CollectionType {
   collectionName: 'informacions';
   info: {
     singularName: 'informacion';

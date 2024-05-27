@@ -1,5 +1,5 @@
 {
-  "kind": "singleType",
+  "kind": "collectionType",
   "collectionName": "informacions",
   "info": {
     "singularName": "informacion",
